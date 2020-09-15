@@ -13,8 +13,8 @@ library(plotly)
 create_dp <- function(metadata,
                       python_path = system("which python")){
 
-  use_python(python_path)
-  dataverk <- import("dataverk")
+  reticulate::use_python(python_path)
+  dataverk <- reticulate::import("dataverk")
   pyMetadata <- reticulate::dict(metadata)
 
   return(dataverk$Datapackage(pyMetadata))
@@ -58,7 +58,7 @@ add_resource <- function(dp,
                          resource_description = '',
                          python_path = system("which python")){
 
-  use_python(python_path)
+  reticulate::use_python(python_path)
   pd <- import("pandas")
 
   named_list = list()
@@ -79,8 +79,8 @@ add_resource <- function(dp,
 #' @export
 
 publish <- function(dp, python_path= system("which python")){
-  use_python(python_path)
-  dataverk <- import("dataverk")
+  reticulate::use_python(python_path)
+  dataverk <- reticulate::import("dataverk")
   dv <- dataverk$Client()
 
   dv$publish(dp)
