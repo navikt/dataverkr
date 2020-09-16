@@ -17,7 +17,7 @@ library(reticulate)
 
 ## Creating datapackages
 ### Metadata
-To create a datapackage you need to have a supply some metadata in named list. To see which field are needed see the
+To create a datapackage you need to supply some metadata in a named list. To see which field are needed see the
 [datapackages](https://dataplattform.gitbook.io/nada/analyseplattform/dataverk/datapakker) documentation.
 
 
@@ -42,7 +42,7 @@ If the metadata is incomplete, an error will occur.
 ## Adding Plotly Figures and Dataframes
 
 ### Plotly figures
-To add a Plolty figure:
+To add a Plotly figure:
 ```
 dataverkr::add_fig(dp = dp,
                    fig = fig,
