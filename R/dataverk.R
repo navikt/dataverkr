@@ -68,6 +68,7 @@ add_resource <- function(dp,
 
   pandas_dict <- reticulate::dict(named_list)
   df <- pd$DataFrame(data = pandas_dict)
+  colnames(df) <- gsub('column.','',colnames(df))
 
   dp$add_resource(resource = df, resource_name = resource_name, resource_description = resource_description)
 }
