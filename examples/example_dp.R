@@ -1,7 +1,6 @@
 # Importing libraries
 library(dataverkr)
 library(plotly)
-library(reticulate)
 
 
 # Creating dataframe
@@ -18,8 +17,8 @@ fig
 metadata <- list(title = 'DataverkR example',
                  bucket =  'nav-opendata',
                  store = 'nais',
-                 temporal = reticulate::dict(from = '2020-09-16',
-                                             to='2020-09-16'),
+                 temporal = list(from = '2020-09-16',
+                                 to='2020-09-16'),
                  type =  'datapackage',
                  format ='datapackage')
 

@@ -6,13 +6,11 @@ has support for creating and publishing datapackages, with Plotly figures and R 
 # Example
 
 ### Importing libraries
-To create and publish a datapackage you need to import [DataverkR](https://github.com/navikt/dataverkr) and
-[Reticulate](https://rstudio.github.io/reticulate/). Also if you want to add Plotly figures you need to import [Plotly](https://plotly.com/r/).
+To create and publish a datapackage you need to import [DataverkR](https://github.com/navikt/dataverkr). Also if you want to add Plotly figures you need to import [Plotly](https://plotly.com/r/).
 
 ```
 library(dataverkr)
 library(plotly)
-library(reticulate)
 ```
 
 ## Creating datapackages
@@ -61,7 +59,7 @@ dataverkr::add_resource(dp = dp,
 ```
 This dataframe will be available for download as .csv file.
 
-### Publishing
+## Publishing
 Finally to publish the datapackage:
 ```
 dataverkr::publish(dp)
