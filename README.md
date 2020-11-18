@@ -22,6 +22,7 @@ You must also have the Python package `dataverk` installed:
 pip install dataverk
 ```
 
+Then you can load this package:
 ```
 library(dataverkr)
 ```
