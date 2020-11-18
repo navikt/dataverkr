@@ -1,16 +1,36 @@
 Package: dataverkr
-Title: What the Package Does (One Line, Title Case)
+Title: Wrapper for Python package 'dataverk'
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+   c(person(given = "Erik",
+            family = "Vattekar",
+            role = c("aut", "cre"),
+            email = "erik.vattekar@nav.no"),
+     person(given = "Jorge Luis",
+            family = "Lopez Marin",
+            role = c("aut"),
+            email = "jorge.luis.lopez.marin@nav.no"),
+     person(given = "Espen",
+           family = "Rosenquist",
+           role = c("ctb"),
+           email = "espen.rosenquist@nav.no"))
+Description: Contains wrappers for creating a data package, add figure and data, 
+    and publish it to dataverk. 
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1.9000
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    plotly,
+    reticulate
+Config/reticulate:
+  list(
+    packages = list(
+      list(package = "dataverk", pip = TRUE)
+    )
+  )
