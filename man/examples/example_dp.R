@@ -15,9 +15,7 @@ fig
 # Metadata for datapackage
 metadata <- list(title = 'DataverkR example',
                  temporal = list(from = '2020-09-16',
-                                 to='2020-09-16'),
-                 type =  'datapackage',
-                 format ='datapackage')
+                                 to='2021-11-05'))
 
 # Creating datapackage
 dp <- dataverkr::create_dp(metadata)
