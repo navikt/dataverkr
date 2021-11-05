@@ -9,7 +9,7 @@ create_dp <- function(metadata,
                       python_path = system("which python")){
 
   use_python(python_path)
-  dataverk <- import("dataverk")
+  dataverk <- import("dataverkr")
   pyMetadata <- dict(metadata)
 
   dataverk$Datapackage(pyMetadata)
