@@ -30,54 +30,25 @@ You must have Python installed on your machine in order to run this package. The
 
 > No non-system installation of Python could be found. Would you like to download and install Miniconda? Miniconda is an open source environment management system for Python. See [miniconda](https://docs.conda.io/en/latest/miniconda.html) for more details.
 
-The warning will only be given one time on each computer.
+The warning will only be given one time on each computer and only if Python is not actually installed.
 
 You can install a Python environment in several ways, none of them very good on Windows. The simplest from a desktop installation of R is to download and install it from [Python](https://www.python.org/downloads/) and then follow this excellent guide at [RStudio support](https://support.rstudio.com/hc/en-us/articles/360023654474-Installing-and-Configuring-Python-with-RStudio).
 
-But, you probably work at NAV, so any Python way will do. It is also in the internal software kiosk.
+In order to run Python in R, you need the [reticulate](https://cran.r-project.org/package=reticulate) package.
 
-It is recommended that you have a virtual Python environment for each and every R project, so as not to let the dependecy hell snakes propagate as it was.
-
-```{python, eval=FALSE}
-pip install virtualenv
+```{r}
+install.packages("reticulate")
 ```
 
-In the terminal, goto your project directory and then create a new virtual environment for Python to live in.
+## Creating datapackages
 
-    cd ~/'R prosjekter'/dataverkr
-
-```{python, eval=FALSE}
-virtualenv my_env
-```
-
-Activate the environment
-
-```{python, eval=FALSE}
-source my_env/bin/activate
-```
-
-From then on, you can pop into your terminal and install needed Python packages with `pip` without being afraid of messing up EVERYTHING.
-
-To have any use of `dataverkr`, must also have the Python package `dataverk` installed.
-
-> ⚠️ **WARNING** do not pip dataverk without a virtual environment.
-
-Dataverk is a big package with a lot of exotic dependencies. Also, it takes quite a lot of time to complile the packages. Your machine will be on it's knees for a while.
-
-Then, of course, you could use Jupyter onprem or at Google Cloud Platform and not having all these challenges.
-
-```{python, eval=FALSE}
-pip install dataverk
-```
-
-Then you can load this package and others you might need:
-
-```{r setup}
+```{r}
+library(reticulate)
 library(dataverkr)
 library(plotly)
 ```
 
-## Creating datapackages
+
 
 ### Metadata
 
