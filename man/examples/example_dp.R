@@ -2,14 +2,13 @@
 library(dataverkr)
 library(plotly)
 
-
 # Creating dataframe
 country <- c("Norge","Sverige", "Danmark")
 numberOf <- c(200, 300, 500)
-data <- data.frame(country, numberOf)
+df <- data.frame(country, numberOf)
 
 # Creating plotly figure
-fig <-  plot_ly(data, x = ~country, y = ~numberOf, type = 'bar')
+fig <-  plot_ly(df, x = ~country, y = ~numberOf, type = 'bar')
 fig
 
 
@@ -33,7 +32,7 @@ dataverkr::add_fig(dp = dp,
 
 # Adding dataframe as a resource to the datapackage
 dataverkr::add_resource(dp = dp,
-                        dataframe = data,
+                        dataframe = df,
                         resource_name = 'some_dataframe',
                         resource_description = 'This is a resource example')
 
