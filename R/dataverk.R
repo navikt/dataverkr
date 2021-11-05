@@ -59,7 +59,7 @@ add_resource <- function(dp,
                          python_path = system("which python")){
 
   reticulate::use_python(python_path)
-  pd <- import("pandas")
+  pd <- reticulate::import("pandas")
 
   named_list = list()
   for  (column in colnames(dataframe)){
