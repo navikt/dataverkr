@@ -14,8 +14,6 @@ fig
 
 # Metadata for datapackage
 metadata <- list(title = 'DataverkR example',
-                 bucket =  'nav-opendata',
-                 store = 'nais',
                  temporal = list(from = '2020-09-16',
                                  to='2020-09-16'),
                  type =  'datapackage',
