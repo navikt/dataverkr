@@ -13,7 +13,7 @@ add_resource <- function(dp,
                          resource_name,
                          resource_description = NULL,
                          python_path = system("which python")) {
-  reticulate::use_python(python_path)
+  use_python(python_path)
   pd <- import("pandas")
 
   named_list = list()
