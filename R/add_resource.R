@@ -11,10 +11,8 @@
 add_resource <- function(dp,
                          dataframe,
                          resource_name,
-                         resource_description = NULL,
-                         python_path = system("which python")) {
-  use_python(python_path)
-  pd <- import("pandas")
+                         resource_description = NULL) {
+  pd <- reticulate::import("pandas")
 
   named_list = list()
   for (column in colnames(dataframe)) {

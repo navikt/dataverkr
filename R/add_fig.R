@@ -12,7 +12,7 @@ add_fig <- function(dp,
                     title = NULL,
                     description = NULL){
 
-  fig_json <- plotly_json(fig)
+  fig_json <- plotly::plotly_json(fig)
 
   dp$add_view(spec = fig_json$x$data,
               spec_type = 'plotly',

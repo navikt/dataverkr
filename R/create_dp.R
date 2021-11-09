@@ -7,14 +7,10 @@
 #' @importFrom reticulate use_python import dict
 #' @example man/examples/example_dp.R
 #' @export
-create_dp <- function(metadata,
-                      python_path = system("which python")){
+create_dp <- function(metadata){
 
-  # Stricter test of Python
-  use_python(python_path, required = TRUE)
-
-  dataverk <- import("dataverk")
-  pyMetadata <- dict(metadata)
+  dataverk <- reticulate::import("dataverk")
+  pyMetadata <- reticulate::dict(metadata)
 
   dataverk$Datapackage(pyMetadata)
 }
