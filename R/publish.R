@@ -5,8 +5,7 @@
 #' @importFrom reticulate import use_python
 #' @example man/examples/example_dp.R
 #' @export
-publish <- function(dp, python_path = system("which python")){
-  use_python(python_path)
+publish <- function(dp){
   dataverk <- reticulate::import("dataverk")
   dv <- dataverk$Client()
 
