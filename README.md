@@ -35,12 +35,8 @@ To create a datapackage you need to supply some metadata in a named list. To see
 
 ```
 metadata <- list(title = 'DataverkR example',
-             bucket =  'nav-opendata',
-             store = 'nais', 
-             temporal = reticulate::dict(from = '2020-09-16',
-                                         to='2020-09-16'), 
-             type =  'datapackage',
-             format ='datapackage')
+                 temporal = list(from = '2020-09-16',
+                                 to='2021-11-05'))
 ```
 
 ### Creating the datapackage
